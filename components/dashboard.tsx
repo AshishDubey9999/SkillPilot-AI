@@ -125,11 +125,11 @@ export function Dashboard({ user, onLogout }: { user?: AuthUser; onLogout?: () =
           ) : active === 'Learning Roadmap' ? (
             <div className="mx-auto max-w-[1500px] p-5 sm:p-8"><LearningRoadmapPage user={user ?? { id: 'guest', fullName: 'Guest', email: '' }} /></div>
           ) : active === 'Resources' ? (
-            <div className="mx-auto max-w-[1500px] p-5 sm:p-8"><ResourcesPage user={user} /></div>
+            <div className="mx-auto max-w-[1500px] p-5 sm:p-8"><ResourcesPage user={user ?? { id: 'guest', fullName: 'Guest', email: '' }} /> </div>
           ) : active === 'My Notes' ? (
-            <div className="mx-auto max-w-[1500px] p-5 sm:p-8"><NotesPage user={user} /></div>
+            <div className="mx-auto max-w-[1500px] p-5 sm:p-8"><NotesPage user={user ?? { id: 'guest', fullName: 'Guest', email: '' }} /></div>
           ) : active === 'Projects' ? (
-            <div className="mx-auto max-w-[1500px] p-5 sm:p-8"><ProjectsPage user={user} /></div>
+            <div className="mx-auto max-w-[1500px] p-5 sm:p-8"><ProjectsPage user={user ?? { id: 'guest', fullName: 'Guest', email: '' }} /></div>
           ) : active === 'Progress & Analytics' ? (
             <div className="mx-auto max-w-[1500px] p-5 sm:p-8"><AnalyticsPage /></div>
           ) : active === 'Job Analyzer' ? (
